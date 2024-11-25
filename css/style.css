@@ -11,6 +11,9 @@ body {
     body{
         max-width: 767px;
         min-width: 320px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 h1, h2, h3, p {
