@@ -923,13 +923,15 @@ button{
     align-items: center;
     justify-content: space-between;
 }
-@media (min-width: 786px){
-    .menu-window-back{
-        display: none;
-    }
-}
+
 .is-open{
     opacity: 1;
     pointer-events: auto;
     display: block;
+}
+
+@media (min-width: 786px){
+    .menu-window-back{
+        display: none;
+    }
 }
