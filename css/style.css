@@ -6,15 +6,7 @@ body {
     font-size: 16px;
     letter-spacing: 0.02em;
     min-width: 320px;
-    margin: auto;
-}
-@media (min-width: 768px){
-  body{
-      min-width: 768px;
-  }   
-}
-@media(min-width:1440px){
-  
+    margin: 0 auto;
 }
 
 h1, h2, h3, p {
@@ -49,11 +41,25 @@ button{
     cursor: pointer;
     padding: 0;
 }
-
-.container {
-    max-width: 1158px;
-    margin: 0px auto;
-    padding: 0px 15px;
+.container{
+    max-width: 320px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-left: auto;
+    padding-right: auto;
+}
+@media (min-width: 768px){
+     .container{
+        max-width: 768px;
+     }
+}
+@media(min-width:1158px){
+    .container {
+        max-width: 1158px;
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
 }
     
 
@@ -211,25 +217,61 @@ button{
     margin-right: 76px ;
 }
 }
-@media (min-width:1440px) {
+@media (min-width:1158px) {
     .address-nav{
         gap: 24px;
         flex-direction: row;
     }  
 }
 /* Hero image section */
-.hero-image {
-    max-width: 1440px;
-    padding: 188px 0;
-    margin: 0 auto;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+    .hero-image {
+        max-width: 360px;
+        padding: 188px 0;
+        margin: 0 auto;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-image/phone\ hero\ image1x.jpg);
         background-size: cover; 
         background-repeat: no-repeat;
         background-position: center;
-    }
-    
+        }
+    @media (min-resolution: 192dpi) {
+        .box {
+          background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-image/phone\ hero\ image2x.jpg);;
+        }
+      }
+      @media (min-width: 786px){
+        .hero-image{
+            max-width: 1158px;
+            background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-image/tablet\ hero\ image1x.jpg);
+        }
+        @media (min-resolution: 192dpi) {
+            .box {
+                background-image: linear-gradient(
+                    rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                    url(../images/hero-image/tablet\ hero\ image2x.jpg);;
+                }
+            }
+        }
+        @media (min-width: 1158px){
+        .hero-image{
+            max-width: 1440px;
+            background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-image/desktop\ hero\ image1x.jpg);
+        }
+        @media (min-resolution: 192dpi) {
+            .box {
+              background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-image/desktop\ hero\ image2x.jpg);;
+            }
+          }
+      }
     .hero-image .container{
         display: flex;
         align-items: center;
@@ -253,6 +295,9 @@ button{
             margin-bottom: 36px;
             width: 496px;
             height: 120px;
+    }
+    .hero-image{
+
     }
 }
 .button{
@@ -347,7 +392,7 @@ button{
         width: calc((100% - 24px) / 2);
     }
 }
-@media (min-width:1440px){
+@media (min-width:1158px){
     .benefits-description{
         font-weight: 400;
     }
@@ -444,7 +489,7 @@ button{
         width: calc((100% - 24px) / 2);
     }
 }
-@media (min-width:1440px){
+@media (min-width:1158px){
     .team-ul{
         gap: 24px;
         align-items: center;
@@ -524,7 +569,7 @@ button{
         flex-basis: calc((100% - 24px) / 2);
     }
 }
-@media (min-width:1440px){
+@media (min-width:1158px){
     .portfolio-ul{
         gap: 24px;
     }
@@ -660,7 +705,7 @@ button{
             flex-direction: row;
         } 
 }
-@media (min-width: 1440px){
+@media (min-width: 1158px){
     .footer .container{
         flex-direction: row;
     }
