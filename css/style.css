@@ -225,7 +225,6 @@ button{
 }
 /* Hero image section */
     .hero-image {
-        max-width: 360px;
         padding: 188px 0;
         margin: 0 auto;
         background-image: linear-gradient(
@@ -244,7 +243,7 @@ button{
       }
       @media (min-width: 786px){
         .hero-image{
-            max-width: 1158px;
+            max-width: 7868px;
             background-image: linear-gradient(
             rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/hero-image/tablet\ hero\ image1x.jpg);
@@ -857,6 +856,7 @@ button{
 .check-box{
     display: flex;
     justify-items: center;
+    flex-direction: row;
     margin-bottom: 24px;
 }
 .privacy-link{
@@ -865,6 +865,11 @@ button{
 }
 .privacy-label{
     cursor: pointer;
+    display: flex;
+    gap: 8px
+}
+.privacy-label input + text{
+    margin-right: 8px;
 }
 .custom-checkbox{
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -872,7 +877,6 @@ button{
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    margin-right: 8px;
     vertical-align: middle;
     display: inline-flex;
     align-items: center;
@@ -891,7 +895,7 @@ button{
 .privacy:checked + .privacy-label > .custom-checkbox .icons-contact{
     opacity: 1;
 }
-
+/* Menu window */
 .menu-window-back{
     display: none;
     position: fixed;
@@ -944,7 +948,7 @@ button{
 .close-button{
     width: 24px;
     height: 24px;
-    background-color: #E7E9FC;
+    background-color: rgba(231, 233, 252, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     position: absolute;
