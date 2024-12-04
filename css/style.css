@@ -104,6 +104,7 @@ button{
 }
 
 .link{
+    font-style: normal;
     font-size: 16px;
     font-weight: 500;
     color: #2e2f42;
@@ -250,7 +251,7 @@ button{
         background-position: center;
         }
     @media (min-resolution: 192dpi) {
-        .box {
+        .hero-image {
           background-image: linear-gradient(
             rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/hero-image/phone_hero_image2x.jpg);
@@ -265,7 +266,7 @@ button{
             url(../images/hero-image/tablet_hero_image1x.jpg);
         }
         @media (min-resolution: 192dpi) {
-            .box {
+            .hero-image {
                 background-image: linear-gradient(
                     rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                     url(../images/hero-image/tablet_hero_image2x.jpg);
@@ -281,7 +282,7 @@ button{
             url(../images/hero-image/desktop_hero_image1x.jpg);
         }
         @media (min-resolution: 192dpi) {
-            .box {
+            .hero-image {
               background-image: linear-gradient(
                 rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
                 url(../images/hero-image/desktop_hero_image2x.jpg);
@@ -295,8 +296,6 @@ button{
     }
 
     .hero-text{
-        width: 216px;
-        height: 160px;
         font-size: 36px;
         line-height: 40px;
         text-align: center;
@@ -310,10 +309,11 @@ button{
             line-height: 60px;
             margin-bottom: 36px;
             width: 496px;
-            height: 120px;
     }
-    .hero-image{
-
+}
+@media(min-width:1158px){
+    .hero-text{
+        margin-bottom: 48px;
     }
 }
 .button{
@@ -354,7 +354,7 @@ button{
 .benefits-name{
     margin-bottom: 8px;
     font-size: 36px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 40px;
 }
 
@@ -410,7 +410,7 @@ button{
     }
     .benefits-name{
         font-size: 20px;
-        align-items: center;
+        line-height: 24px;        
     }
     .benefits-icon-box{
         display: flex;
@@ -580,7 +580,7 @@ button{
 }
 @media (min-width:1158px){
     .portfolio-ul{
-        gap: 24px;
+        gap: 40px 24px;
     }
     .portfolio-list{
         max-width: 360px;
@@ -617,8 +617,11 @@ button{
     color: #F4F4FD;
 }
 .footer .container{
-    align-items: baseline;
-    
+    align-items: baseline;  
+}
+.footer-description-contacts{
+    margin-bottom: 72px;
+
 }
 .footer-contacts-box{
     width: 208px;
@@ -626,8 +629,6 @@ button{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 72px;
-
 }
 .footer-contacts-text{
     color: #FFFFFF;
@@ -674,7 +675,7 @@ button{
 .footer-post{
     border: 1px solid #FFF;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
@@ -704,23 +705,26 @@ button{
         }
         .footer-discription{
             width: 264px;
+            margin: 0;
             margin-right: 24px;
-            margin-bottom: 72px;
         }
         .footer .container{
             display: flex;
-            align-items: center;
-            justify-content: center ;
             flex-direction: column;
+            padding: 0 108px;
         }
         .footer-form{
             flex-direction: row;
         } 
+        .footer-post{
+            width: 264px;
+        }
 }
 @media (min-width: 1158px){
     .footer .container{
         flex-direction: row;
         align-items: normal;
+        padding: 0 15px;
     }
     .footer-discription{
         margin: 0;
@@ -728,7 +732,11 @@ button{
     }
     .footer-contacts-box{
         margin: 0;
+    }
+    .footer-description-contacts{
+        margin: 0;
         margin-right: 80px;
+
     }
 }
 /* Modal Window */
@@ -758,16 +766,23 @@ button{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
 }
 @media(min-width:768px){
     .modal-window{
         width: 408px;
+        padding: 72px 24px 24px 24px;
+
+    }
+}
+@media (min-width: 1158px){
+    .form-input:focus{
+        border-color:#4D5AE5;
+    }
+    .form-icon-input:focus + svg{
+        fill: #4d5ae5;
     }
 }
 .close-button{
@@ -799,12 +814,7 @@ button{
     color: #2E2F42;
     font-weight: 500;
 }
-.form-input:focus{
-    border-color:#4D5AE5;
-}
-.form-icon-input:focus + svg{
-    fill: #4d5ae5;
-}
+
 
 .input-box{
     margin-bottom: 8px;
@@ -857,7 +867,6 @@ button{
     line-height: 1.17;
     letter-spacing: 0.04em;
     display: block;
-    margin-bottom: 4px;
 }
 
 .form-button{
@@ -870,6 +879,7 @@ button{
 .check-box{
     display: flex;
     justify-items: center;
+    align-items: center;
     flex-direction: row;
     margin-bottom: 24px;
 }
@@ -880,6 +890,7 @@ button{
 .privacy-label{
     cursor: pointer;
     display: flex;
+    align-items: center;
     gap: 8px
 }
 .privacy-label input + text{
@@ -923,6 +934,7 @@ button{
     pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .menu-window{
     padding: 72px 16px 40px 16px;
     display: flex;
